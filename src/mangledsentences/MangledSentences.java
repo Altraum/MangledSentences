@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mangledsentences;
 
 import java.util.Scanner;
@@ -17,18 +12,12 @@ public class MangledSentences {
      * @param args the command line arguments
      */
     
-    
-    
-    public static void main(String[] args) {
+    public static void mixer(String sentence){
         Random mangler = new Random();
-        Scanner input = new Scanner(System.in);
         int stopIndex;
         int startIndex = 0;
         char[] charDivider;
         char[] mangledWord;
-        String sentence;
-        System.out.println("Input sentence to be mangled.");
-        sentence=input.nextLine();
         charDivider = new char[sentence.length()];
         for(int index = 0;index<=sentence.length();index++){
             if(index >= charDivider.length){
@@ -86,5 +75,13 @@ public class MangledSentences {
                 System.out.print(" ");
             }
         }
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String sentence;
+        System.out.println("Input sentence to be mangled.");
+        sentence=input.nextLine();
+        mixer(sentence);
     }
 }
